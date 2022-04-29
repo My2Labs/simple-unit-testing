@@ -1,24 +1,8 @@
-var mentors = [
-    {
-        name: 'Irina',
-        title: 'Dr.',
-        yearsOfExperience: 10
-    }, {
-        name: 'Ashleigh',
-        title: 'Dame',
-        yearsOfExperience: 20
-    }, {
-        name: 'Etza',
-        title: 'Professor',
-        yearsOfExperience: 30
-    }
-];
-
 function getMentorInfo(mentors, name) {
     var result;
     var greeting = 'Hello ';
 
-    result = mentors.find(function (person) {
+    result = mentors.find(function(person) {
         return person.name === name;
     });
 
@@ -33,9 +17,9 @@ function getMentorInfo(mentors, name) {
     result.jobTitle = mentorTitle;
     result.fullName = result.title + ' ' + result.name;
 
+    console.log(result)
     return result;
 }
 
-var result = getMentorInfo(mentors, 'Etza')
 
 module.exports = getMentorInfo
