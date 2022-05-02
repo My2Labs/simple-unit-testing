@@ -17,7 +17,7 @@ function getMentorInfo(mentors, name) {
     result.jobTitle = mentorTitle;
     result.fullName = result.title + ' ' + result.name;
 
-    console.log(result)
+    // console.log(result)
     return result;
 }
 
