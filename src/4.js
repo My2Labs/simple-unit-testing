@@ -1,32 +1,28 @@
 function myFunction(salary, taxCode, incomeTax1, incomeTax2, ownsCar) {
-  var totalIncomeTax = incomeTax1 + incomeTax2;
-  var studentLoan = (salary - 17775) * 0.09;
-  var originalSalary = salary;
-  var nationalInsurance = null;
+    var totalIncomeTax = incomeTax1 + incomeTax2;
+    var studentLoan = (salary - 17775) * 0.09;
+    var originalSalary = salary;
+    var nationalInsurance = null;
 
-  if (taxCode === "1150L") {
-    nationalInsurance = salary * 0.1;
-  } else if (taxCode === "ST") {
-    nationalInsurance = salary * 0.05;
-  } else {
-    nationalInsurance = salary * 0.08;
-  }
+    if (taxCode === "1150L") {
+        nationalInsurance = salary * 0.1;
+    } else if (taxCode === "ST") {
+        nationalInsurance = salary * 0.05;
+    } else {
+        nationalInsurance = salary * 0.08;
+    }
 
-  var deductions = [nationalInsurance, totalIncomeTax, studentLoan];
+    var deductions = [nationalInsurance, totalIncomeTax, studentLoan];
 
-  salary = salary - deductions[0];
-  salary = salary - deductions[1];
-  salary = salary - deductions[2];
+    salary = salary - deductions[0];
+    salary = salary - deductions[1];
+    salary = salary - deductions[2];
 
-  return (
-    "Your gross income is £" +
-    originalSalary.toString() +
-    " and your net income is £" +
-    salary.toString() +
-    "."
-  );
+    return (
+        `Your gross income is £${originalSalary}, and your net income is £${salary}.`
+    );
 }
 
-// console.log(myFunction(28000, "1150L", 1000, 580, false));
+console.log(myFunction(28000, "1150L", 1000, 580, false));
 
 module.exports = myFunction
