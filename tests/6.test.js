@@ -4,7 +4,7 @@ describe("getCircleAreas", () => {
     it("should exist", () => {
         expect(getCircleAreas).toBeDefined();
     });
-    it("when m is less than n", () => {
+    it("return area of circle", () => {
         expect(getCircleAreas("2")).toEqual(expect.arrayContaining([12.56]));
     });
 })
