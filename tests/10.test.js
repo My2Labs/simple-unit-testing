@@ -4,8 +4,8 @@ describe("removeVowelsForWords", () => {
     it("should exist", () => {
         expect(removeVowelsForWords).toBeDefined();
     });
-    it("when word is entered, vowels are removed from the word and returned.", () => {
-        expect(removeVowelsForWords(["Sharron was here"])).toEqual("ao a ee")
+    it("when words are entered, vowels are removed from the words and returned.", () => {
+        expect(removeVowelsForWords(["Sharron", "was", "here"])).toEqual(["__a__o_", "_a_", "_e_e"])
     });
 
 })
