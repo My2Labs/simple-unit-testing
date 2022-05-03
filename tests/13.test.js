@@ -5,7 +5,7 @@ describe("getLargestNumber", () => {
         expect(getLargestNumber).toBeDefined();
     });
     it('when array of numbers is entered, largest number is returned.', () => {
-        expect(getLargestNumber([13, 14, 15, 16, 17])).toEqual([17])
+        expect(getLargestNumber([13, 14, 15, 16, 17])).toEqual(17)
     })
 
 })
