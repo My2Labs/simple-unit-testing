@@ -4,7 +4,6 @@ function greetPeople(people) {
     people.forEach(function(person) {
         greeting = greeting + person;
     });
-    console.log(greeting)
     return greeting;
 }
 
